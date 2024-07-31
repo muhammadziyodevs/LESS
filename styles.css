@@ -1,0 +1,80 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+h1 {
+  color: #4D90FE;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.product {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  animation: scaleUp 0.5s ease-in-out;
+}
+.product:hover {
+  transform: translateY(-10px);
+}
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.product h2 {
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.product p {
+  color: #4D90FE;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.product a {
+  display: block;
+  color: #fff;
+  background-color: #4D90FE;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: background 0.3s, transform 0.3s;
+}
+.product a:hover {
+  background: #106cff;
+  transform: scale(1.1);
+}

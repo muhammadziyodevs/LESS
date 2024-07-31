@@ -1,0 +1,96 @@
+// O'zgaruvchilar
+@primary-color: #4D90FE;
+@light-color: #fff;
+@secondary-color: #333;
+@font-family: Arial, sans-serif;
+@button-bg-color: #FF5733;
+@button-hover-color: #C70039;
+@link-hover-color: #106cff;
+
+// Animatsiyalar
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+// Asosiy container
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    color: @primary-color;
+    font-family: @font-family;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;  // Mahsulot kengligi
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: scaleUp 0.5s ease-in-out;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    img {
+        width: 200px;  // Mahsulot rasmi kengligi
+        height: 200px;  // Mahsulot rasmi balandligi
+        object-fit: cover;  // Rasmni o'lchamga moslashtirish
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: @secondary-color;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    p {
+        color: @primary-color;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        display: block;
+        color: @light-color;
+        background-color: @primary-color;
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        transition: background 0.3s, transform 0.3s;
+
+        &:hover {
+            background: @link-hover-color;
+            transform: scale(1.1);
+        }
+    }
+
+
+}
